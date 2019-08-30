@@ -11,7 +11,9 @@ function canJump(nums) {
 
     for (let j = 1; j < nums.length; j++) {
         for (let i = 0; i < j; i++) {
+            // possible to reach the step i and the number of jumps we can do from that step i
             if (dpPositions[i] && i + nums[i] >= j) {
+                // once the i step can reach the j step no need to check other steps
                 dpPositions[j] = true;
                 break;
             }
