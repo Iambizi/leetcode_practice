@@ -1,7 +1,6 @@
 const merge = intervals => {
-    //First sort all intervals by their starting value from least to greatest
     if (!intervals.length) return intervals;
-
+    //First sort all intervals by their starting value from least to greatest
     intervals.sort((a, b) => a[0] - b[0]);
 
     const res = [intervals[0]];
