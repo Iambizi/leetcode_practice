@@ -1,4 +1,5 @@
 function coinChange(coins, amount) {
+    /* create dp array fill with infinty value except for value at index 0, start at 0*/
     let dpMinCoins = new Array(amount + 1).fill(Infinity);
     dpMinCoins[0] = 0;
 
@@ -12,6 +13,7 @@ function coinChange(coins, amount) {
         }
     }
     const answer = dpMinCoins[dpMinCoins.length - 1];
+    // to account for last test when change is not possible we se 
     return answer === Infinity ? -1 : answer;
 }
 
