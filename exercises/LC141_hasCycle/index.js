@@ -1,11 +1,5 @@
 function hasCycle(head) {
     //create a slow and fast variable that are initially set to head of Linked list
-
-
-    //if LL is circular, "slow" and "fast" will eventually equal each other.
-
-    //if LL is not circular, "fast" will just traverse to second to last or last node of LL.
-
     let slow = head;
     let fast = head;
 
@@ -15,12 +9,12 @@ function hasCycle(head) {
         slow = slow.next;
         // "fast" will move up 2 nodes.
         fast = fast.next.next;
-        // we are indeed in a circular LL
+        //if LL is circular, "slow" and "fast" will eventually equal each other.
         if(slow === fast){
             return true;
         }
     }
-    // if while loop never finishes LL not circular
+    //if LL is not circular, "fast" will just traverse to second to last or last node of LL.
     return false;
 }
 
