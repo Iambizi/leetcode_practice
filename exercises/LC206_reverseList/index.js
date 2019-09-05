@@ -11,7 +11,6 @@ const reverseList = head => {
         prev = current;
         current = temp;
     }
-
     return prev;
 };
 
