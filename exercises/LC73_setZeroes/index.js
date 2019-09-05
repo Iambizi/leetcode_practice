@@ -1,8 +1,7 @@
 /*
-If the first row and/or the first column needs to be set to zeros 
-we need to do that last
+    If the first row and/or the first column needs to be set to zeros 
+    we need to do that last
 */
-
 /* 
     1) Loop over the 1st column and check if there are zeros
      if there are, store that info in a variable for later use
@@ -10,18 +9,18 @@ we need to do that last
     2) Loop over 1st row and check if there are zeros, 
     if there are, store that info into a variable for later use
 
-    3)
+    3) Go over rest of matrix and check for zeros,
+    if there are, modify the first row and column 
 
     4) Zero out the cells not in first row & first col based on previous flags
 
     5) Zero all cells in first row based on step 1
 
     6) Zero all cells in first column based on step 1 
-    */
+*/
 function setZeroes(matrix) {
     let firstColHasZero = false;
     let firstRowHasZero = false;
-
     //Check if first column has zero
     for(let i = 0; i < matrix.length; i++){
         if(matrix[i][0] === 0){
