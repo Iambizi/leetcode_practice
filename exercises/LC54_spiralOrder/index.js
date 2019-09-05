@@ -49,7 +49,7 @@ const spiralArray = [];
             dir = "right";
         }
     }
-    //while loop keeps runing untill our matrix is exhausted then 
+    //while loop keeps runing untill our matrix is exhausted then original spiralArray
     
     return spiralArray; 
 }
