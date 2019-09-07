@@ -1,4 +1,4 @@
-/*we are going to solve this with a helper method recursion*/
+/*we are going to solve this with a recursive helper method*/
 function isSameTree(p, q) {
     // if helper method conditions are met sameTree value will change 
     let sameTree = true;
