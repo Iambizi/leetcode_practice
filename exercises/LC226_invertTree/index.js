@@ -7,7 +7,10 @@ function invertTree(root) {
         const temp = node.left;
         node.left = node.right;
         node.right = temp;
-        
+        /*
+        once we invert the children from top node
+        we are going to keep going the node inverting children again and again
+        */
         helper(node.left);
         helper(node.right);
     }
