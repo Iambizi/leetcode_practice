@@ -14,6 +14,7 @@ function maxDepth(root) {
             maxDepth = Math.max(currentDepth -1, maxDepth );
             return;
         }
+        // call helper function on left and right child as well: 'depth + 1' cause were going one level down
         dive(node.left,currentDepth + 1)
         dive(node.right,currentDepth + 1)
     }
